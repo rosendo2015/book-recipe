@@ -1,12 +1,23 @@
 import {createGlobalStyle} from 'styled-components'
+import bgImage from '../assets/main-image.png'
 export default createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Alice", sans-serif;
 }
 body{
-    background: ${({theme})=>theme.COLORS.BACKGROUND_800};
+   padding: 5rem;
+    width: 100%;
+    height: 100%;
+    
+    background: url(${bgImage}) no-repeat;
+    background-size: cover;
+
+    flex-shrink: 0;
+    backdrop-filter: blur(12px);
+    
     color: ${({theme})=>theme.COLORS.WHITE};
 }
 a{
